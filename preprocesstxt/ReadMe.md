@@ -1,3 +1,8 @@
+## Text as Data 
+
+Takes a directory of text files and outputs processed text files in the same directory structure.
+
+<pre><code>
 Usage: process_cc_clean.py [options] <directory of text files>
 
 Options:
@@ -15,6 +20,7 @@ Options:
                         None)
   --include-text        Also Output cleaned text as column in program data
                         file (default: No)
+</code></pre>
 
   NOTE: 
   By default the program applies the following functions :-
