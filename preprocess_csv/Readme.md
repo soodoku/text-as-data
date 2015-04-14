@@ -1,8 +1,6 @@
-Pre-processing data for some Text as Data Analyses
-===================================================
+## Pre-processing data for some Text as Data Analyses
 
-Description
------------
+### Description
 
 Pre-process data for some text as data kinds of analyses. 
 
@@ -16,7 +14,7 @@ The script:
 
 The following show all script options and default value of the options: 
 
-```
+<pre><code>
     preprocessData.py - r6 (2014/09/15)
 
     Usage: preprocessDataForML.py [options] <CSV input file>
@@ -40,14 +38,13 @@ The following show all script options and default value of the options:
       --keep-numbers        Keep numbers and words that begin with numbers
                             (default: No)
       --keep-stems          Do not stem (default: No)
-```
+</code></pre>
 
 
-EXAMPLE
--------
-
-```
-	python preprocessData.py -c Content test.csv -o test-cleaned.csv
-```
+### EXAMPLE
 
 To clean column name `Content` in `test.csv` and save output as `test-cleaned.csv`
+
+<pre><code>
+	python preprocessData.py -c Content test.csv -o test-cleaned.csv
+</code></pre>	
