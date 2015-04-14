@@ -4,15 +4,15 @@
 
 Pre-process data for some text as data kinds of analyses. 
 
-Input: csv with 'dirty text' column
-Output: csv with 'clean text' column 
+Input: csv with 'dirty text' column  
+Output: csv with 'clean text' column  
 
-The script:
-1. Depending on what the user wants, removes stop words, stems, normalizes (takes out special characters, extra whitespace etc.).
-2. And then dumps the cleaned data back into a new csv with all the other columns 
-3. Downloads nltk_data to ./nltk_data directory if no such directory exists
+The script:  
+1. Depending on what the user wants, removes stop words, stems, normalizes (takes out special characters, extra whitespace etc.).  
+2. And then dumps the cleaned data back into a new csv with all the other columns  
+3. Downloads nltk_data to ./nltk_data directory if no such directory exists  
 
-The following show all script options and default value of the options: 
+The following show all script options and default value of the options:  
 
 <pre><code>
     preprocessData.py - r6 (2014/09/15)
