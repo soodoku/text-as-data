@@ -18,7 +18,7 @@ from nltk.stem.porter import PorterStemmer
 
 from random import randint
 
-__version__ = 'r6 (2014/09/15)'
+__version__ = 'r7 (2014/09/25)'
 
 
 def parse_command_line(argv):
