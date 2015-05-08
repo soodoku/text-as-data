@@ -12,10 +12,12 @@ The script:
 2. And then dumps the cleaned data back into a new csv with all the other columns  
 3. Downloads nltk_data to ./nltk_data directory if no such directory exists  
 
+You can also just output a random sample of the file. See this [Stackflow](http://stackoverflow.com/questions/692312/randomly-pick-lines-from-a-file-without-slurping-it-with-unix) documentation for how random sampling is implemented.
+
 The following show all script options and default value of the options:  
 
 <pre><code>
-    preprocessData.py - r6 (2014/09/15)
+    preprocessData.py - r7 (2014/09/25)
 
     Usage: preprocessDataForML.py [options] <CSV input file>
 
@@ -40,8 +42,7 @@ The following show all script options and default value of the options:
       --keep-stems          Do not stem (default: No)
 </code></pre>
 
-
-### EXAMPLE
+### Example
 
 To clean column name `Content` in `test.csv` and save output as `test-cleaned.csv`
 
