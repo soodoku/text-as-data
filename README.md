@@ -10,10 +10,13 @@ Depending on the need, remove stop words, punctuation, capitalization, special c
 
 ### Subset
 
+Output a simple or stratified random sample of a csv, and only the columns you need. Get summary of crucial aspects of the data. See [Subset](https://github.com/soodoku/text-as-data/blob/master/subset/).
+
 ### TDF
 
 ### R
-For classifying text in R using SVM or Lasso, see [Basic Text Classifier](https://gist.github.com/soodoku/e34dbe0219b0f00a74d5)
+
+* Classify text in R using SVM or Lasso. See [Basic Text Classifier](https://gist.github.com/soodoku/e34dbe0219b0f00a74d5)
 
 ### License
 Scripts are released under the [MIT License](https://github.com/soodoku/Weather-Data/License%20for%20Scripts.md).
