@@ -1,14 +1,19 @@
 ## Text as Data
 
 ### Preprocess
-Preprocess text for text-as-data analysis. Depending on the need, remove stop words, punctuation, capitalization, special characters, and stem.
+Preprocess text for text-as-data analysis. 
 
-One of the scripts takes a directory of 'raw' text files and outputs processed text files in the same directory structure. 
-The other script takes a csv with 'raw' text and outputs a csv with processed text.
+Depending on the need, remove stop words, punctuation, capitalization, special characters, and stem.
+
+* [preprocesstxt](https://github.com/soodoku/text-as-data/tree/master/preprocesstxt) takes a directory of 'raw' text files and outputs processed text files in the same directory structure. 
+* [preprocess_csv](https://github.com/soodoku/text-as-data/tree/master/preprocess_csv) takes a csv with 'raw' text and outputs a csv with processed text.
 
 ### Subset
 
 ### TDF
+
+### R
+For classifying text in R using SVM or Lasso, see [Basic Text Classifier](https://gist.github.com/soodoku/e34dbe0219b0f00a74d5)
 
 ### License
 Scripts are released under the [MIT License](https://github.com/soodoku/Weather-Data/License%20for%20Scripts.md).
