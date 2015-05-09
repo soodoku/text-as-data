@@ -14,7 +14,7 @@ Output a simple or stratified random sample of a csv, and only the columns you n
 
 ### Get TDF
 
-### Analyze Data in R
+### Analyze Text in R
 
 * Classify text in R using SVM or Lasso. See [Basic Text Classifier](https://gist.github.com/soodoku/e34dbe0219b0f00a74d5)
 

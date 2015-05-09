@@ -4,7 +4,11 @@ Subset, Simple Random or Stratified Random Sample
 Description
 -----------
 
-Takes a csv, column containing labels (y), and options such as size of random sample, n per label if you want a stratified random sample, column names of columns you want to keep (default is to keep all), etc. see more below. The script produces a csv, and prints out a summary of the data (though you can suppress it). An index column that tracks the row index of the input data is added to the outputted csv.
+Takes a csv, column containing labels (y), and options such as size of random sample, n per label if you want a stratified random sample, column names of columns you want to keep (default is to keep all), etc. see more below. The script produces a csv that includes an index column that tracks the row index of the input data. The script also prints out the following features of the data:
+- Total number of rows
+- Reports total # of unique labels
+- Reports total number of rows per unique label
+- Runs automatically when script is called
 
 Usage
 --------------
