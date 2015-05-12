@@ -1,5 +1,12 @@
 ## Text as Data
 
+### Get Text Data
+
+You can get text data from scraping, APIs, searchable pdfs, images of paper, etc. Some examples:
+* [Get Congressional Speech Data](https://gist.github.com/soodoku/85d79275c5880f67b4cf) using Capitol Words API from the Sunlight Foundation
+* [Get data from Wisconsin Ads storyboards](https://gist.github.com/soodoku/62a3172eb1b4a55dee1a)
+* [Get text from images of text](https://github.com/soodoku/image-to-text)
+
 ### Preprocess Text
 Preprocess text for text-as-data analysis. 
 
@@ -13,6 +20,9 @@ Depending on the need, remove stop words, punctuation, capitalization, special c
 Output a simple or stratified random sample of a csv, and only the columns you need. Get summary of crucial aspects of the data. See [Subset](https://github.com/soodoku/text-as-data/blob/master/subset/).
 
 ### Get TDF
+
+### Sentiment Analysis in Python
+* [Basic sentiment analysis](https://gist.github.com/soodoku/22e4cff2eb6a05be3c0d) using AFINN
 
 ### Analyze Text in R
 
