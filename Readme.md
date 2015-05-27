@@ -44,4 +44,4 @@ Create a term-document-matrix and get some information about the matrix includin
 
 ### License
 
-Scripts are released under the [MIT License](https://github.com/soodoku/Weather-Data/License%20for%20Scripts.md).
+Scripts are released under the [MIT License](License.md).
