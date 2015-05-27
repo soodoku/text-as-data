@@ -20,7 +20,7 @@ Preprocess text for text-as-data analysis.
 
 Depending on the need, remove stop words, punctuation, capitalization, special characters, and stem.
 
-* [preprocess_txt](preprocesstxt/) takes a directory of 'raw' text files and outputs processed text files in the same directory structure. 
+* [preprocess_txt](preprocess_txt/) takes a directory of 'raw' text files and outputs processed text files in the same directory structure. 
 * [preprocess_csv](preprocess_csv/) takes a csv with 'raw' text and outputs a csv with processed text.
 
 ### Get Summary of Data, Subset Data
