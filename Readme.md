@@ -41,6 +41,7 @@ Create a term-document-matrix and get some information about the matrix includin
 ### Analyze Text in R
 
 * Classify text in R using SVM or Lasso. See [Basic Text Classifier](https://gist.github.com/soodoku/e34dbe0219b0f00a74d5)
+* Worked out example of how to model words as a function of ideology using Congressional Speech. See [Speech Learn](https://github.com/soodoku/speech-learn)
 
 ### License
 
