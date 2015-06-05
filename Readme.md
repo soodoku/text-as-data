@@ -13,9 +13,11 @@
 You can get text data from scraping, APIs, searchable pdfs, images of paper, etc. Some examples:
 * [Get Congressional Speech Data](https://gist.github.com/soodoku/85d79275c5880f67b4cf) using Capitol Words API from the Sunlight Foundation
 * [Get data from Wisconsin Ads storyboards](https://gist.github.com/soodoku/62a3172eb1b4a55dee1a)
-* [Get text from images of text](https://github.com/soodoku/image-to-text)
+* [Get text from images of text Using Tesseract from Python](https://github.com/soodoku/image-to-text)
+* [Get text from images of text Using Abbyy FineReader Cloud OCR from R](https://github.com/soodoku/abbyyR)
 
 ### Preprocess Text
+
 Preprocess text for text-as-data analysis. 
 
 Depending on the need, remove stop words, punctuation, capitalization, special characters, and stem.
