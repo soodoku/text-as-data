@@ -11,10 +11,10 @@
 ### Get Text Data
 
 You can get text data from scraping, APIs, searchable pdfs, images of paper, etc. Some examples:
+* Get text data from searchable pdfs. e.g. [Get data from Wisconsin Ads storyboards using Python](https://gist.github.com/soodoku/62a3172eb1b4a55dee1a)
+* [Get text from images of text using Tesseract from Python](https://github.com/soodoku/image-to-text)
+* [Get text from images of text using Abbyy FineReader Cloud OCR from R](https://github.com/soodoku/abbyyR)
 * [Get Congressional Speech Data](https://gist.github.com/soodoku/85d79275c5880f67b4cf) using Capitol Words API from the Sunlight Foundation
-* [Get data from Wisconsin Ads storyboards](https://gist.github.com/soodoku/62a3172eb1b4a55dee1a)
-* [Get text from images of text Using Tesseract from Python](https://github.com/soodoku/image-to-text)
-* [Get text from images of text Using Abbyy FineReader Cloud OCR from R](https://github.com/soodoku/abbyyR)
 
 ### Preprocess Text
 
@@ -25,7 +25,7 @@ Depending on the need, remove stop words, punctuation, capitalization, special c
 * [preprocess_txt](preprocess_txt/) takes a directory of 'raw' text files and outputs processed text files in the same directory structure. 
 * [preprocess_csv](preprocess_csv/) takes a csv with 'raw' text and outputs a csv with processed text.
 
-### Get Summary of Data, Subset Data
+### Get Summary of the Data, Subset Data
 
 Output a simple or stratified random sample of a csv, and only the columns you need. Get summary of crucial aspects of the data. Takes a csv. 
 
@@ -38,6 +38,7 @@ Create a term-document-matrix and get some information about the matrix includin
 * [Get TDM, TF-IDF, Summary](tdm/).
 
 ### Sentiment Analysis in Python
+
 * [Basic sentiment analysis](https://gist.github.com/soodoku/22e4cff2eb6a05be3c0d) using AFINN
 
 ### Analyze Text in R
