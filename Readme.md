@@ -1,4 +1,6 @@
-## Text as Data
+### Text as Data
+
+[![MIT](https://img.shields.io/github/license/mashape/apistatus.svg)](https://opensource.org/licenses/MIT)
 
 1. [Get Text](https://github.com/soodoku/text-as-data#get-text-data)
 2. [Preprocess Text](https://github.com/soodoku/text-as-data#preprocess-text)
@@ -8,7 +10,7 @@
 	* [Analyze Text in R](https://github.com/soodoku/text-as-data#analyze-text-in-r)
 	* [Sentiment Analysis in Python](https://github.com/soodoku/text-as-data#sentiment-analysis-in-python)
 
-### Get Text Data
+### Get Text
 
 You can get text data from scraping, APIs, searchable pdfs, images of paper, etc. Some examples:
 * Get text data from searchable pdfs. e.g. [Get data from Wisconsin Ads storyboards using Python](https://gist.github.com/soodoku/62a3172eb1b4a55dee1a)
@@ -48,4 +50,4 @@ Create a term-document-matrix and get some information about the matrix includin
 
 ### License
 
-Scripts are released under the [MIT License](License.md).
+Scripts are released under the [MIT License](https://opensource.org/licenses/MIT).		
