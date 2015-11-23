@@ -1,4 +1,4 @@
-### Text as Data
+## Text as Data
 
 [![MIT](https://img.shields.io/github/license/mashape/apistatus.svg)](https://opensource.org/licenses/MIT)
 [![Build Status](https://travis-ci.org/soodoku/text-as-data.svg?branch=master)](https://travis-ci.org/soodoku/text-as-data)
@@ -14,9 +14,10 @@
 ### Get Text
 
 You can get text data from scraping, APIs, searchable pdfs, images of paper, etc. Some examples:
-* Get text data from searchable pdfs. e.g. [Get data from Wisconsin Ads storyboards using Python](https://gist.github.com/soodoku/62a3172eb1b4a55dee1a)
+* Get text from searchable pdfs. e.g. [Get data from Wisconsin Ads storyboards using Python](https://gist.github.com/soodoku/62a3172eb1b4a55dee1a)
 * [Get text from images of text using Tesseract from Python](https://github.com/soodoku/image-to-text)
 * [Get text from images of text using Abbyy FineReader Cloud OCR from R](https://github.com/soodoku/abbyyR)
+* [Get text from images of text using Captricity OCR from R](https://github.com/soodoku/captr)
 * [Get Congressional Speech Data](https://gist.github.com/soodoku/85d79275c5880f67b4cf) using Capitol Words API from the Sunlight Foundation
 
 ### Preprocess Text
