@@ -1,6 +1,7 @@
 ### Text as Data
 
 [![MIT](https://img.shields.io/github/license/mashape/apistatus.svg)](https://opensource.org/licenses/MIT)
+[![Build Status](https://travis-ci.org/soodoku/text-as-data.svg?branch=master)](https://travis-ci.org/soodoku/text-as-data)
 
 1. [Get Text](https://github.com/soodoku/text-as-data#get-text-data)
 2. [Preprocess Text](https://github.com/soodoku/text-as-data#preprocess-text)

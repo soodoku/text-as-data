@@ -9,7 +9,7 @@ You can also just output a random sample of the file. See this [Stackflow](http:
 Downloads nltk_data to ./nltk_data directory if no such directory exists  
 
 To run the script, on the shell, type:
-```python
+```
 python preprocessData.py [options] <CSV input file>
 ```
 
@@ -40,6 +40,6 @@ Options:
 
 To clean column name `Content` in `test.csv` and save output as `test-cleaned.csv`
 
-```python
-python preprocessData.py -c Content test.csv -o test-cleaned.csv
+```
+python preprocess_csv/preprocessData.py -c speaking preprocess_csv/sample_in.csv -o preprocess_csv/sample-out.csv
 ```
