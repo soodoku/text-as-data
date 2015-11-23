@@ -13,5 +13,6 @@ install:
     - pip install nltk
 
 script:
+    - python -m nltk.downloader all
     - python preprocess_csv/preprocessData.py -c speaking preprocess_csv/sample_in.csv -o sample-out.csv
 
