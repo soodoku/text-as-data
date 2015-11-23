@@ -38,7 +38,7 @@ Options:
 
 ### Example
 
-To clean column name `speaking` in [sample_in.csv](sample_in.csv) and save output as [sample_out.csv](sample-out.csv)
+To clean column name `speaking` in [sample_in.csv](sample_in.csv) and save output as [sample-out.csv](sample-out.csv)
 
 ```
 python preprocessData.py -c speaking sample_in.csv -o sample-out.csv
