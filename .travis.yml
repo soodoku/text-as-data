@@ -15,5 +15,5 @@ install:
     - pip install lxml
 
 script:
-    - python preprocessData.py -c speaking sample_in.csv -o sample-out.csv
+    - python preprocess_csv/preprocessData.py -c speaking preprocess_csv/sample_in.csv -o sample-out.csv
 
