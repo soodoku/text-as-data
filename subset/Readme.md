@@ -41,9 +41,7 @@ The script supports the following command line options:
 ### Example
 
 ```
-python SubsetData.py -s 1000 --selected-cols "labels;text" --no-report -o input-subset.csv input.csv
+python SubsetData.py -c speaker_party -s 10 --selected-cols "speaker_party;speaking" --no-report -o sample_out.csv sample_in.csv
 ```
 
-Randomly samples 1000 row from `input.csv` and saves as `input-subset.csv` with only columns named `labels` and `text`
-
-An `index` column is added to output CSV file as a unique ID (row index of the input CSV file)
+Randomly samples 10 row from [sample_in.csv](sample_in.csv) and saves as [sample_out.csv](sample_out.csv) with only columns named `speaker_party` and `speaking`. An `index` column is added to output CSV file as a unique ID (row index of the input CSV file)

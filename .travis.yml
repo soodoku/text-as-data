@@ -15,4 +15,5 @@ install:
 
 script:
     - python preprocess_csv/preprocessData.py -c speaking preprocess_csv/sample_in.csv -o sample-out.csv
+    - python subset/SubsetData.py -c speaker_party -s 10 --selected-cols "speaker_party;speaking" --no-report -o sample_out.csv subset/sample_in.csv
 
