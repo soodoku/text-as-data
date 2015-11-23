@@ -11,8 +11,7 @@ sudo: required
 install:
     - pip install --upgrade pip
     - pip install nltk
-
+    - python2.7 -c "import nltk; nltk.download('stopwords'); nltk.download('word_tokenize'); nltk.download('PorterStemmer')"
 script:
-    - python -m nltk.downloader all
     - python preprocess_csv/preprocessData.py -c speaking preprocess_csv/sample_in.csv -o sample-out.csv
 
