@@ -1,10 +1,17 @@
-## Text as Data 
+## Preprocess Text in Directory of Text Files
 
 Takes a directory of text files and outputs processed text files in the same directory structure.
 
-<pre><code>
-Usage: process_cc_clean.py [options] <directory of text files>
+By default, the script converts text to lower case, removes special characters (!"#$%&\'()*+-/:;<=>@[\\]^_`{|}~), removes diacritics, and removes extra space. 
 
+To run the script, type the following in shell:
+```
+python preprocess.py [options] <directory of text files>
+```
+
+The script takes the following command line options: 
+
+```
 Options:
   -h, --help            show this help message and exit
   -o OUTFILE, --out=OUTFILE
@@ -20,11 +27,12 @@ Options:
                         None)
   --include-text        Also Output cleaned text as column in program data
                         file (default: No)
-</code></pre>
+```
 
-  NOTE: 
-  By default the program applies the following functions :-
-  - to_lower_case
-  - remove_special_characters (!"#$%&\'()*+-/:;<=>@[\\]^_`{|}~)
-  - remove_diacritics
-  - remove_extra_space
+### Example
+
+To clean files in directory `sample_in` and save output in `sample_out`
+
+```
+python preprocess_txt/preprocess.py preprocess_text/sample_in/ -o preprocess_txt/sample-out/
+```

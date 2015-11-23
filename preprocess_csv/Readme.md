@@ -1,4 +1,4 @@
-## Preprocess Text Data in a CSV 
+## Preprocess Text in CSV 
 
 Pre-process text data for some text as data kinds of analyses. 
 
