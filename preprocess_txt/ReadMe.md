@@ -1,4 +1,4 @@
-## Preprocess Text in Directory of Text Files
+## Preprocess Directory of Text Files
 
 Takes a directory of text files and outputs processed text files in the same directory structure.
 

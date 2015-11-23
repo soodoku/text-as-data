@@ -165,7 +165,6 @@ def init_nltk():
     #nltk.download('stopwords', './nltk_data')
     #nltk.download('punkt', './nltk_data')
 
-
 if __name__ == "__main__":
     with open('./test/input-latin-1.txt', "rt") as f:
         text = ''.join(f.readlines())
