@@ -7,6 +7,11 @@ Takes a csv, column containing labels (y), and options such as size of random sa
 
 ### Usage
 
+The script depends on `pandas` and Python 2.7. To install the dependency,
+```
+pip install pandas
+```
+
 To run the script,
 ```
 python SubsetData.py [options] <CSV input file>

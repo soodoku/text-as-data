@@ -6,7 +6,21 @@ The script takes a csv with raw text and outputs a csv with pre-processed text. 
 
 You can also just output a random sample of the file. See this [Stackflow](http://stackoverflow.com/questions/692312/randomly-pick-lines-from-a-file-without-slurping-it-with-unix) documentation for how random sampling is implemented.
 
-Downloads nltk_data to ./nltk_data directory if no such directory exists  
+The script depends on `nltk` library and Python 2.7. To install the dependency,
+```
+pip install nltk
+```
+
+You also need to download nltk data. The script downloads nltk_data to ./nltk_data directory if no such directory exists. But you can download all the nltk data via:
+```
+python -m nltk.downloader all
+```
+
+Or, by going into python shell and typing: 
+```python
+import nltk
+nltk.download()
+```
 
 To run the script, on the shell, type:
 ```
