@@ -13,6 +13,8 @@ install:
     - pip install nltk
     - python -m nltk.downloader all
     - pip install pandas
+    - pip install numpy
+    - pip install git+http://github.com/scipy/scipy/
     - pip install -U scikit-learn
 
 script:
