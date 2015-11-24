@@ -24,4 +24,4 @@ install:
 script:
     - python preprocess_csv/preprocessData.py -c speaking preprocess_csv/sample_in.csv -o sample-out.csv
     - python subset/SubsetData.py -c speaker_party -s 10 --selected-cols "speaker_party;speaking" --no-report -o sample_out.csv subset/sample_in.csv
-
+    - python tdm/tdm.py --max-features=100 --n-freq=10 --n-sparse=20 --remove-n-freq=10 --remove-n-sparse=40 -t speaking -l speaker_party  --out-tdm-file=tdm.csv --use-tfidf --out-tfidf-file=tfidf.csv tdm/sample_in.csv

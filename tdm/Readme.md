@@ -1,8 +1,9 @@
-#### Create Term Document Matrix or TF-IDF
+## Create Term Document Matrix or TF-IDF
 
 The script takes a csv with a (preprocessed) text column and outputs a tdm, tf-idf. It also prints out summary including  most frequent terms, most infrequent terms etc. See below for more detail.
 
 The script depends on `sklearn` which in turn depends on `numpy` and `scipy'. To install the dependencies:
+
 ```
 sudo apt-get install -qq python-numpy python-scipy
 pip install -U sklearn
@@ -50,9 +51,11 @@ Options:
 ### Example
 
 ```
-python TDM.py --max-features=100 --n-freq=10 --n-sparse=20 --remove-terms-file=remove-terms.csv --remove-n-freq=10 --remove-n-sparse=40 --out-tdm-file=tdm.csv --use-tfidf --out-tfidf-file=tfidf.csv input.csv
+python tdm.py --max-features=100 --n-freq=10 --n-sparse=20 --remove-n-freq=10 --remove-n-sparse=40 -t speaking -l speaker_party  --out-tdm-file=tdm.csv --use-tfidf --out-tfidf-file=tfidf.csv sample_in.csv
 ```
+
+The script processes the `speaking` column in [sample_in.csv](sample_in.csv) that contains the text and produces both [tdm](tdm.csv) and [tfidf](tfidf.csv)
 
 Note that the TDM/TF-IDF output CSV file will be large and take a long time to save if there are a lot of terms (columns).
 
-The `index` column also added to output CSV file as reference unique ID (row index of the input CSV file)
+The `index` column also added to output CSV file as reference unique ID (row index of the input CSV file).
