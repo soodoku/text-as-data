@@ -2,9 +2,15 @@
 
 The script takes a csv with a (preprocessed) text column and outputs a tdm, tf-idf. It also prints out summary including  most frequent terms, most infrequent terms etc. See below for more detail.
 
+The script depends on `sklearn` which in turn depends on `numpy` and `scipy'. To install the dependencies:
+```
+sudo apt-get install -qq python-numpy python-scipy
+pip install -U sklearn
+```
+
 To run the script:
 ```
-python TDM.py [options] <CSV input file>
+python tdm.py [options] <CSV input file>
 ```
 
 Here are all the script options and default values of the options:
