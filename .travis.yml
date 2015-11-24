@@ -13,6 +13,7 @@ install:
     - pip install nltk
     - python -m nltk.downloader all
     - pip install pandas
+    - pip install -U scikit-learn
 
 script:
     - python preprocess_csv/preprocessData.py -c speaking preprocess_csv/sample_in.csv -o sample-out.csv
