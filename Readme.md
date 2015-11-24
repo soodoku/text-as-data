@@ -3,11 +3,13 @@
 [![MIT](https://img.shields.io/github/license/mashape/apistatus.svg)](https://opensource.org/licenses/MIT)
 [![Build Status](https://travis-ci.org/soodoku/text-as-data.svg?branch=master)](https://travis-ci.org/soodoku/text-as-data)
 
+A general pipeline for analyzing text data: Acquire, preprocess, process and analyze text data. 
+
 1. [Get Text](https://github.com/soodoku/text-as-data#get-text-data)
 2. [Preprocess Text](https://github.com/soodoku/text-as-data#preprocess-text)
 3. [Subset, Take a Random Sample, Summarize](https://github.com/soodoku/text-as-data#get-summary-of-data-subset-data)
 4. [Create tdm/tf-idf](https://github.com/soodoku/text-as-data#get-tdm)
-5. Analyze the data
+5. Analyze
 	* [Analyze Text in R](https://github.com/soodoku/text-as-data#analyze-text-in-r)
 	* [Sentiment Analysis in Python](https://github.com/soodoku/text-as-data#sentiment-analysis-in-python)
 
