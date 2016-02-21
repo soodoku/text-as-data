@@ -105,7 +105,7 @@ def stemmed(words):
         try:
             stemmed_words.append(st.stem(w))
         except:
-            print("WARN: cannot stem '%s'" % (w))
+            print("WARN: cannot stem '{0!s}'".format((w)))
     return stemmed_words
 
 
@@ -127,7 +127,7 @@ def remove_punctuation(words):
     """Remove punctuation
     """
 
-    punct_regex = re.compile('[%s]' % re.escape(string.punctuation))
+    punct_regex = re.compile('[{0!s}]'.format(re.escape(string.punctuation)))
     nopunct_words = []
     for w in words:
         nw = punct_regex.sub(u'', w)
@@ -148,11 +148,11 @@ def remove_numbers(words):
 
 
 if __name__ == "__main__":
-    print("%s - %s\n" % (os.path.basename(sys.argv[0]), __version__))
+    print("{0!s} - {1!s}\n".format(os.path.basename(sys.argv[0]), __version__))
     (options, args) = parse_command_line(sys.argv)
     if len(args) < 2:
-        print("Usage: %s [options] <CSV input file>" %
-              os.path.basename(sys.argv[0]))
+        print("Usage: {0!s} [options] <CSV input file>".format(
+              os.path.basename(sys.argv[0])))
         sys.exit(-1)
 
     print(options)
@@ -163,8 +163,8 @@ if __name__ == "__main__":
         if options.append:
             o = open(options.outfile, 'ab' if options.append else 'wb')
         else:
-            overwrite = raw_input("File '%s' exists, overwrite? (Y/n): " %
-                                  options.outfile).lower() != 'n'
+            overwrite = raw_input("File '{0!s}' exists, overwrite? (Y/n): ".format(
+                                  options.outfile)).lower() != 'n'
             if overwrite:
                 o = open(options.outfile, 'wb')
             else:
@@ -173,15 +173,15 @@ if __name__ == "__main__":
     f = open(args[1])
     reader = csv.DictReader(f)
     if options.column not in reader.fieldnames:
-        print("ERROR: Specified text column not found ('%s')" % options.column)
-        print("There are following columns in '%s' :-" % args[1])
+        print("ERROR: Specified text column not found ('{0!s}')".format(options.column))
+        print("There are following columns in '{0!s}' :-".format(args[1]))
         for c in reader.fieldnames:
-            print "- %s" % (c)
+            print "- {0!s}".format((c))
         sys.exit()
 
     ncols = len(reader.fieldnames)
     if options.keep:
-        cols = reader.fieldnames + ['<cleaned>%s' % options.column]
+        cols = reader.fieldnames + ['<cleaned>{0!s}'.format(options.column)]
     else:
         cols = reader.fieldnames
     writer = csv.DictWriter(o, cols)
@@ -192,16 +192,16 @@ if __name__ == "__main__":
     for r in reader:
         if i % 100 == 0:
             if i < options.begin - 1:
-                print("Skipped row: %d" % i)
+                print("Skipped row: {0:d}".format(i))
             else:
-                print("Cleaning row: %d" % i)
+                print("Cleaning row: {0:d}".format(i))
         i += 1
         if i < options.begin:
             continue
         if options.end != 0 and i > options.end:
             break
         if len(r) != ncols:
-            print("WARN: row #%d is corrupted" % i)
+            print("WARN: row #{0:d} is corrupted".format(i))
             continue
         if randint(0, 100) > options.random:
             continue
@@ -226,11 +226,11 @@ if __name__ == "__main__":
             # Stemmed
             words = stemmed(words)
         if options.keep:
-            r['<cleaned>%s' % options.column] = ' '.join(words)
+            r['<cleaned>{0!s}'.format(options.column)] = ' '.join(words)
         else:
             r[options.column] = ' '.join(words)
         writer.writerow(r)
         count += 1
-    print("Complete total: %d rows" % count)
+    print("Complete total: {0:d} rows".format(count))
     f.close()
     o.close()

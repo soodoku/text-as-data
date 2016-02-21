@@ -23,10 +23,10 @@ def TDMReport(vec, X, opts):
                            'sum': np.asarray(X.sum(axis=0)).ravel().tolist()})
     freq_df['ratio'] = freq_df['sum']/np.sum(freq_df['sum'])
 
-    print("Total terms: %d" % len(vec.vocabulary_))
-    print("Most frequent %d terms: " % opts.n_freq)
+    print("Total terms: {0:d}".format(len(vec.vocabulary_)))
+    print("Most frequent {0:d} terms: ".format(opts.n_freq))
     print freq_df.sort('sum', ascending=False).head(opts.n_freq)
-    print("Most sparse %d terms: " % opts.n_sparse)
+    print("Most sparse {0:d} terms: ".format(opts.n_sparse))
     print freq_df.sort('sum', ascending=True).head(opts.n_sparse)
 
     return freq_df
@@ -53,10 +53,10 @@ def TFIDFReport(vec, X, opts):
                            'sum': np.asarray(X.sum(axis=0)).ravel().tolist()})
     freq_df['ratio'] = freq_df['sum']/np.sum(freq_df['sum'])
 
-    print("Total terms: %d" % len(vec.vocabulary_))
-    print("Most frequent %d terms: " % opts.n_freq)
+    print("Total terms: {0:d}".format(len(vec.vocabulary_)))
+    print("Most frequent {0:d} terms: ".format(opts.n_freq))
     print freq_df.sort('sum', ascending=False).head(opts.n_freq)
-    print("Most sparse %d terms: " % opts.n_sparse)
+    print("Most sparse {0:d} terms: ".format(opts.n_sparse))
     print freq_df.sort('sum', ascending=True).head(opts.n_sparse)
 
     return freq_df
@@ -165,14 +165,14 @@ def parse_command_line(argv):
 
 
 if __name__ == "__main__":
-    print("%s - %s\n" % (os.path.basename(sys.argv[0]), __version__))
+    print("{0!s} - {1!s}\n".format(os.path.basename(sys.argv[0]), __version__))
     (opts, args) = parse_command_line(sys.argv)
     if len(args) < 2:
-        print("Usage: %s [options] <CSV input file>" %
-              os.path.basename(sys.argv[0]))
+        print("Usage: {0!s} [options] <CSV input file>".format(
+              os.path.basename(sys.argv[0])))
         sys.exit(-1)
 
-    print("Options: %s" % opts)
+    print("Options: {0!s}".format(opts))
 
     opts.remove_terms = []
 
@@ -181,10 +181,10 @@ if __name__ == "__main__":
             opts.remove_terms = pd.read_csv(opts.remove_terms_file,
                                             header=None)[0].tolist()
         except:
-            print("WARN: Cannot read remove terms file (%s)" %
-                  opts.remove_terms_file)
+            print("WARN: Cannot read remove terms file ({0!s})".format(
+                  opts.remove_terms_file))
 
-    print("Reading input file...(%s)" % args[1])
+    print("Reading input file...({0!s})".format(args[1]))
     cols = [opts.textColumn] + opts.labelColumns.split(opts.delimiter)
     df = pd.read_csv(args[1], usecols=cols)
     print("Creating Term Document Matrix...")
@@ -197,7 +197,7 @@ if __name__ == "__main__":
     ext_cols = opts.labelColumns.split(opts.delimiter)
     out_df = out_df[cols].join(pd.DataFrame(df[ext_cols]))
     if opts.out_tdm_file:
-        print("Saving TDM output to CSV file... (%s)" % opts.out_tdm_file)
+        print("Saving TDM output to CSV file... ({0!s})".format(opts.out_tdm_file))
         out_df.to_csv(opts.out_tdm_file, index_label='index')
     if opts.use_tfidf:
         print("Creating TF-IDF Matrix...")
@@ -209,7 +209,7 @@ if __name__ == "__main__":
         cols = out_df.columns - n_sparses - n_frequents
         out_df = out_df[cols].join(pd.DataFrame(df[ext_cols]))
         if opts.out_tfidf_file:
-            print("Saving TF-IDF output to CSV file... (%s)" %
-                  opts.out_tfidf_file)
+            print("Saving TF-IDF output to CSV file... ({0!s})".format(
+                  opts.out_tfidf_file))
             out_df.to_csv(opts.out_tfidf_file, index_label='index')
     print("Done!!!")
