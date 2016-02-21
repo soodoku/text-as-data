@@ -96,10 +96,10 @@ def DataReport(filename, labelColumn, options):
     with open(filename) as f:
         reader = csv.DictReader(f)
         if labelColumn not in reader.fieldnames:
-            print("ERROR: Specified label column not found ('%s')" % labelColumn)
-            print("There are following columns in '%s' :-" % filename)
+            print("ERROR: Specified label column not found ('{0!s}')".format(labelColumn))
+            print("There are following columns in '{0!s}' :-".format(filename))
             for c in reader.fieldnames:
-                print "- %s" % (c)
+                print "- {0!s}".format((c))
             return
         count = 0
         all_labels = dict()
@@ -107,9 +107,9 @@ def DataReport(filename, labelColumn, options):
         for i, r in enumerate(reader):
             if i % 10000 == 0:
                 if i < options.begin - 1:
-                    print("Skipped: #%d" % i)
+                    print("Skipped: #{0:d}".format(i))
                 else:
-                    print("Processed: %d" % i)
+                    print("Processed: {0:d}".format(i))
             if i < options.begin - 1:
                 continue
             if options.end != 0 and i >= options.end:
@@ -136,23 +136,23 @@ def DataReport(filename, labelColumn, options):
                 count += 1
         print("-"*80)
         print("================================ Data Report ================================")
-        print("Label column: '%s' (delimiter: '%s')" % (labelColumn,
+        print("Label column: '{0!s}' (delimiter: '{1!s}')".format(labelColumn,
                                                         options.delimiter))
-        print("Total Number of labeled articles: %d" % (count))
-        print("Number of distinct labels: %d" % (len(all_labels)))
+        print("Total Number of labeled articles: {0:d}".format((count)))
+        print("Number of distinct labels: {0:d}".format((len(all_labels))))
         n = 0
         for l in sorted(all_labels, key=all_labels.get, reverse=True):
             n += all_labels[l]
-            print("%-70s %6d" % (l, all_labels[l]))
+            print("{0:<70!s} {1:6d}".format(l, all_labels[l]))
         print("============================== Label Statistics ==============================")
-        print("Maximum number of multiple labels: %d" %
-              sorted(nlabels.keys())[-1])
+        print("Maximum number of multiple labels: {0:d}".format(
+              sorted(nlabels.keys())[-1]))
         for n in nlabels:
             print '-'*80
-            print("N = %d (%d articles)" % (n, nlabels[n].count))
+            print("N = {0:d} ({1:d} articles)".format(n, nlabels[n].count))
             for l in sorted(nlabels[n].labels, key=nlabels[n].labels.get,
                             reverse=True):
-                print("%-70s %6d" % (l, nlabels[n].labels[l]))
+                print("{0:<70!s} {1:6d}".format(l, nlabels[n].labels[l]))
         print("-"*80)
 
 
@@ -190,22 +190,22 @@ def StratifiedSample(data, nperlabel):
     sortedgrp = datagrp.size().order(ascending=False)
     for i, l in enumerate(sortedgrp.index):
         if sortedgrp[l] > nperlabel:
-            print("==> %-50s %6d" % (l, sortedgrp[l]))
+            print("==> {0:<50!s} {1:6d}".format(l, sortedgrp[l]))
             sample = sample.append(RandomSample(data[data['label'] == l],
                                    nperlabel))
         else:
             break
-    print("There are %d labels have more than %d articles" % (i, nperlabel))
-    print("Sample size: %s articles" % (len(sample)))
+    print("There are {0:d} labels have more than {1:d} articles".format(i, nperlabel))
+    print("Sample size: {0!s} articles".format((len(sample))))
     return sample
 
 
 if __name__ == "__main__":
-    print("%s - %s\n" % (os.path.basename(sys.argv[0]), __version__))
+    print("{0!s} - {1!s}\n".format(os.path.basename(sys.argv[0]), __version__))
     (options, args) = parse_command_line(sys.argv)
     if len(args) < 2:
-        print("Usage: %s [options] <CSV input file>" %
-              os.path.basename(sys.argv[0]))
+        print("Usage: {0!s} [options] <CSV input file>".format(
+              os.path.basename(sys.argv[0])))
         sys.exit(-1)
 
     print(options)
@@ -214,7 +214,7 @@ if __name__ == "__main__":
         print("Data analysis in progress...")
         DataReport(args[1], options.column, options)
 
-    print("Reading CSV file...(%s)" % args[1])
+    print("Reading CSV file...({0!s})".format(args[1]))
     data = pd.read_csv(args[1], usecols=[options.column])
     data.columns = ['label']
     # Subsetting data by --begin and --end option
@@ -223,13 +223,13 @@ if __name__ == "__main__":
     data = data[options.begin - 1:options.end]
     data = SelectRows(data, options)
     if options.size != 0:
-        print("Random sampling...(N = %d)" % options.size)
+        print("Random sampling...(N = {0:d})".format(options.size))
         data = RandomSample(data, options.size)
     if options.nperlabel != 0:
-        print("Stratified sampling...(N per label = %d)" % options.nperlabel)
+        print("Stratified sampling...(N per label = {0:d})".format(options.nperlabel))
         data = StratifiedSample(data, options.nperlabel)
 
-    print("Writing output CSV file...(%s)" % options.outfile)
+    print("Writing output CSV file...({0!s})".format(options.outfile))
     if options.selected_cols: 
         columns = [c.strip() for c in
                    options.selected_cols.split(options.delimiter)
@@ -237,7 +237,7 @@ if __name__ == "__main__":
         try:
             outdata = pd.read_csv(args[1], usecols=columns)
         except Exception as e:
-            print("ERROR: Cannot read CSV file (%s)" % e.message)
+            print("ERROR: Cannot read CSV file ({0!s})".format(e.message))
             sys.exit(-1)
     else:
         outdata = pd.read_csv(args[1])
